@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.costbench/mcp",
   "title": "CostBench",
-  "description": "Verified software pricing, hidden costs, negotiation data & TCO for 3,290+ products. Read-only, sourced.",
-  "version": "1.0.0",
+  "description": "Verified pricing, hidden costs, negotiation data & TCO for 3,290+ software products.",
+  "version": "1.0.1",
   "websiteUrl": "https://costbench.com",
   "repository": {
     "url": "https://github.com/aadilr/costbench-mcp",

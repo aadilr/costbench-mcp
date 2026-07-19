@@ -1,0 +1,13 @@
+{
+  "name": "costbench",
+  "description": "Verified software pricing intelligence for Claude — true costs, hidden fees, negotiation data, price history, and TCO for 3,290+ products, every fact sourced. Bundles the hosted CostBench MCP server and a software-pricing skill with a curl fallback for environments without MCP.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aadil Razvi",
+    "url": "https://costbench.com"
+  },
+  "homepage": "https://costbench.com/mcp",
+  "repository": "https://github.com/aadilr/costbench-mcp",
+  "license": "MIT",
+  "keywords": ["pricing", "saas-pricing", "software-pricing", "tco", "mcp", "skill"]
+}

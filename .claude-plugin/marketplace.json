@@ -1,0 +1,15 @@
+{
+  "name": "costbench",
+  "description": "Verified software pricing for Claude — hidden costs, negotiation data, price history & TCO for 3,290+ products. Sourced, read-only.",
+  "owner": {
+    "name": "Aadil Razvi",
+    "url": "https://costbench.com"
+  },
+  "plugins": [
+    {
+      "name": "costbench",
+      "source": "./",
+      "description": "Query verified software pricing from Claude — hidden costs, negotiation tips, price history, and TCO. Hosted MCP server + software-pricing skill."
+    }
+  ]
+}

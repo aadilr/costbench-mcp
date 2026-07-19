@@ -1,0 +1,35 @@
+{
+  "name": "costbench-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for CostBench — verified software pricing, hidden costs, negotiation data, price history, and TCO for 3,290+ products. Read-only, every fact sourced.",
+  "type": "module",
+  "bin": {
+    "costbench-mcp": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pricing",
+    "saas-pricing",
+    "software-pricing",
+    "tco",
+    "costbench"
+  ],
+  "author": "Aadil Razvi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadilr/costbench-mcp.git"
+  },
+  "homepage": "https://costbench.com",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}

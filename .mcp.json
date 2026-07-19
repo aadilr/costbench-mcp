@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "costbench": {
+      "type": "http",
+      "url": "https://costbench.com/mcp"
+    }
+  }
+}

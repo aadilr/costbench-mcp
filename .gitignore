@@ -1,2 +1,6 @@
 node_modules/
 *.log
+
+# Local agent tooling — never publish
+AGENTS.md
+.claude/

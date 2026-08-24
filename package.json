@@ -1,7 +1,7 @@
 {
   "name": "costbench-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for CostBench — verified software pricing, hidden costs, negotiation data, price history, and TCO for 3,290+ products. Read-only, every fact sourced.",
+  "version": "1.1.0",
+  "description": "MCP server for CostBench — verified software pricing, hidden costs, negotiation data, price history, price-change feed, and TCO for 3,390+ products. Read-only, every fact sourced.",
   "type": "module",
   "bin": {
     "costbench-mcp": "index.js"

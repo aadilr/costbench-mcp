@@ -4,7 +4,7 @@
  *
  * Verified software-pricing intelligence for AI agents: true costs, hidden
  * fees, negotiation data, price history, TCO, and LLM-cost estimates for
- * 3,290+ products — every fact sourced and dated. Read-only.
+ * 3,390+ products — every fact sourced and dated. Read-only.
  *
  * This is a thin stdio client for the hosted CostBench MCP endpoint
  * (https://costbench.com/mcp, streamable HTTP). Tool discovery is answered
@@ -23,7 +23,7 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 
 const ENDPOINT = process.env.COSTBENCH_MCP_URL || 'https://costbench.com/mcp';
-const SERVER_VERSION = '1.0.0';
+const SERVER_VERSION = '1.1.0';
 
 // Tool definitions mirror the hosted server (https://costbench.com/mcp
 // method tools/list) so discovery works offline. All tools are read-only.
@@ -123,6 +123,21 @@ const TOOLS = [
         },
       },
       required: ['slug'],
+    },
+  },
+  {
+    name: 'get_price_changes',
+    description:
+      'Recent software pricing changes CostBench detected against vendor pricing pages (increases, decreases, plan restructures) — dated, with before/after price bands and a source link. Filter by product slug, category, or lookback window. The "what changed lately" answer; each item links to the sourced record.',
+    annotations: { readOnlyHint: true, openWorldHint: false },
+    inputSchema: {
+      type: 'object',
+      properties: {
+        slug: { type: 'string', description: 'Only changes for this product' },
+        category: { type: 'string', description: 'Only changes in this category slug, e.g. "crm"' },
+        days: { type: 'number', description: 'Lookback window in days (default 30, max 365)' },
+        limit: { type: 'number', description: 'Max items (default 25, max 100)' },
+      },
     },
   },
 ];

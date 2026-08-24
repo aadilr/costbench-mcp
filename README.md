@@ -1,6 +1,6 @@
 # CostBench MCP Server
 
-Verified software-pricing intelligence for any MCP client — true costs, hidden fees, negotiation data, price history, side-by-side comparisons, and total cost of ownership for **3,290+ products**. Read-only, free, no API key, no signup.
+Verified software-pricing intelligence for any MCP client — true costs, hidden fees, negotiation data, price history, side-by-side comparisons, a dated price-change feed, and total cost of ownership for **3,390+ products**. Read-only, free, no API key, no signup.
 
 Powered by [CostBench.com](https://costbench.com). Every figure the server returns carries its **source and date** — the data is only as trustworthy as its provenance, so CostBench publishes the provenance with each number. Responses include an `attribution` field and per-entity `links` back to the sourced page.
 
@@ -16,6 +16,7 @@ Powered by [CostBench.com](https://costbench.com). Every figure the server retur
 | `discover_software` | Find products by `category`, `maxPrice`, `hasFreeTier`. Returns matching slugs to look up. |
 | `calculate_tco` | Total cost of ownership for a product and team size: sourced line items, year-one + multi-year totals, effective per-seat cost. Args: `slug`, `seats`, optional `tier`, `termYears`. |
 | `estimate_llm_cost` | Cost of an LLM/API workload (input + output tokens) for a usage-priced provider, from its real rate card. Args: `slug`, `inputTokens`, `outputTokens`, optional `model`. |
+| `get_price_changes` | Recent pricing changes CostBench detected against vendor pricing pages — dated, before/after bands, source link. Args: optional `slug`, `category`, `days` (default 30), `limit` (default 25). Same data as the public feed at `https://costbench.com/data/pricing-changes.json`. |
 
 All tools are **read-only** (`readOnlyHint: true`). Products are addressed by `slug` (e.g. `salesforce`, `microsoft-teams`, `openai-api`); use `discover_software` if you don't know one.
 
@@ -125,7 +126,7 @@ The `get_pricing` call above returns a record like:
 
 | | |
 |---|---|
-| Products | 3,290+ |
+| Products | 3,390+ |
 | Categories | 255 |
 | Comparisons | 5,850+ |
 | Coverage | Tiers, hidden costs, contract terms, negotiation data, price history, TCO, LLM rate cards |
